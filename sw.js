@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='punt0-shell-v1.0.30';
+const CACHE='punt0-shell-v1.0.31';
 const BASE=new URL('./',self.location.href);
 const SHELL=new URL('index.html',BASE).href;
 const ASSETS=['index.html','manifest.webmanifest','icon-180.png','icon-192.png','icon-512.png'].map(p=>new URL(p,BASE).href);
