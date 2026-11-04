@@ -556,3 +556,4 @@ const previous=render;render=function(){previous();refresh()};toggle.onclick=()=
 document.addEventListener('click',e=>{const a=e.target.closest('[data-mobile-section]');if(a){e.preventDefault();close();navigate(a.dataset.mobileSection);window.scrollTo({top:0,behavior:'auto'});return}if(!e.target.closest('.mobileMainNav,#mobileMorePanel'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!more.hidden){close();toggle.focus()}});window.addEventListener('hashchange',close);window.matchMedia('(max-width:650px)').addEventListener('change',close);refresh();
 })();
 </script></body></html>
+<!-- PUNT0 v1.0.31 - retry GitHub Pages deployment -->
