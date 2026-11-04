@@ -188,7 +188,7 @@ Object.assign(paths,{
 });
 const icon=k=>['oggi','casa','spese','auto','viaggi','doc','appunti'].includes(k)?`<span class="softIcon softIcon-${k}" aria-hidden="true"></span>`:`<svg class="designIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[k]||paths.doc}</svg>`;
 const heroSymbols={oggi:['oggi','casa','spese','viaggi'],casa:['casa','key','tools','doc'],spese:['spese','coin','chart','receipt'],auto:['auto','key','tools','shield'],viaggi:['viaggi','plane','pin','route']};
-const sections={oggi:'Oggi',casa:'Casa',spese:'Spese',auto:'Veicoli',viaggi:'Viaggi',appunti:'Appunti'},collections={asset:'assets',vehicle:'vehicles',trip:'trips',expense:'expenses',task:'tasks'},names={asset:'oggetto di casa',vehicle:'veicolo',trip:'viaggio',expense:'movimento',task:'scadenza'},sectionKind={casa:'asset',auto:'vehicle',viaggi:'trip',spese:'expense'};
+const sections={oggi:'Oggi',spese:'Spese',casa:'Casa',auto:'Veicoli',viaggi:'Viaggi',appunti:'Appunti'},collections={asset:'assets',vehicle:'vehicles',trip:'trips',expense:'expenses',task:'tasks'},names={asset:'oggetto di casa',vehicle:'veicolo',trip:'viaggio',expense:'movimento',task:'scadenza'},sectionKind={casa:'asset',auto:'vehicle',viaggi:'trip',spese:'expense'};
 let state=C.empty(),section='oggi',editing=null,filterMonth=C.month(),query='',selectedPalette='blu',toastTimer;
 try{const raw=localStorage.getItem(KEY);if(raw)state=C.validate(JSON.parse(raw))}catch(e){setTimeout(()=>toast('Dati salvati non leggibili. Importa un backup dalle impostazioni.'),100)}
 function toast(s){$('#toast').textContent=s;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,5000)}
